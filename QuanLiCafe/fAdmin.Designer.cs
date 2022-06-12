@@ -31,10 +31,12 @@ namespace QuanLiCafe
         {
             this.tabAccount = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btnRePass = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.cbAccountType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.cbAccountType = new System.Windows.Forms.ComboBox();
+            this.cbDisplayName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.txbUserName = new System.Windows.Forms.TextBox();
@@ -111,8 +113,6 @@ namespace QuanLiCafe
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.cbDisplayName = new System.Windows.Forms.TextBox();
-            this.btnRePass = new System.Windows.Forms.Button();
             this.tabAccount.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -162,7 +162,7 @@ namespace QuanLiCafe
             this.tabAccount.Location = new System.Drawing.Point(4, 24);
             this.tabAccount.Name = "tabAccount";
             this.tabAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAccount.Size = new System.Drawing.Size(759, 389);
+            this.tabAccount.Size = new System.Drawing.Size(757, 380);
             this.tabAccount.TabIndex = 4;
             this.tabAccount.Text = "Tài Khoản";
             this.tabAccount.UseVisualStyleBackColor = true;
@@ -178,6 +178,15 @@ namespace QuanLiCafe
             this.panel12.Size = new System.Drawing.Size(352, 282);
             this.panel12.TabIndex = 6;
             // 
+            // btnRePass
+            // 
+            this.btnRePass.Location = new System.Drawing.Point(233, 136);
+            this.btnRePass.Name = "btnRePass";
+            this.btnRePass.Size = new System.Drawing.Size(116, 34);
+            this.btnRePass.TabIndex = 4;
+            this.btnRePass.Text = "Đặt lại mật khẩu";
+            this.btnRePass.UseVisualStyleBackColor = true;
+            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.cbAccountType);
@@ -186,6 +195,14 @@ namespace QuanLiCafe
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(345, 38);
             this.panel13.TabIndex = 5;
+            // 
+            // cbAccountType
+            // 
+            this.cbAccountType.FormattingEnabled = true;
+            this.cbAccountType.Location = new System.Drawing.Point(126, 4);
+            this.cbAccountType.Name = "cbAccountType";
+            this.cbAccountType.Size = new System.Drawing.Size(216, 23);
+            this.cbAccountType.TabIndex = 1;
             // 
             // label5
             // 
@@ -206,13 +223,12 @@ namespace QuanLiCafe
             this.panel14.Size = new System.Drawing.Size(345, 38);
             this.panel14.TabIndex = 4;
             // 
-            // cbAccountType
+            // cbDisplayName
             // 
-            this.cbAccountType.FormattingEnabled = true;
-            this.cbAccountType.Location = new System.Drawing.Point(126, 4);
-            this.cbAccountType.Name = "cbAccountType";
-            this.cbAccountType.Size = new System.Drawing.Size(216, 23);
-            this.cbAccountType.TabIndex = 1;
+            this.cbDisplayName.Location = new System.Drawing.Point(126, 6);
+            this.cbDisplayName.Name = "cbDisplayName";
+            this.cbDisplayName.Size = new System.Drawing.Size(216, 23);
+            this.cbDisplayName.TabIndex = 2;
             // 
             // label6
             // 
@@ -296,7 +312,6 @@ namespace QuanLiCafe
             this.btnEditAccount.TabIndex = 2;
             this.btnEditAccount.Text = "Sửa";
             this.btnEditAccount.UseVisualStyleBackColor = true;
-            this.btnEditAccount.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnDeleteAccount
             // 
@@ -324,7 +339,7 @@ namespace QuanLiCafe
             this.tabTable.Location = new System.Drawing.Point(4, 24);
             this.tabTable.Name = "tabTable";
             this.tabTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTable.Size = new System.Drawing.Size(759, 389);
+            this.tabTable.Size = new System.Drawing.Size(645, 380);
             this.tabTable.TabIndex = 3;
             this.tabTable.Text = "Bàn Ăn";
             this.tabTable.UseVisualStyleBackColor = true;
@@ -640,7 +655,7 @@ namespace QuanLiCafe
             // 
             this.panel6.Controls.Add(this.txbSearchFoodName);
             this.panel6.Controls.Add(this.btnSearchFood);
-            this.panel6.Location = new System.Drawing.Point(401, 6);
+            this.panel6.Location = new System.Drawing.Point(401, 12);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(352, 77);
             this.panel6.TabIndex = 1;
@@ -667,7 +682,7 @@ namespace QuanLiCafe
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel7);
-            this.panel5.Location = new System.Drawing.Point(401, 89);
+            this.panel5.Location = new System.Drawing.Point(401, 96);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(352, 282);
             this.panel5.TabIndex = 2;
@@ -756,7 +771,7 @@ namespace QuanLiCafe
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.Location = new System.Drawing.Point(10, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 0;
@@ -783,7 +798,7 @@ namespace QuanLiCafe
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(54, 7);
+            this.label2.Location = new System.Drawing.Point(54, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 17);
             this.label2.TabIndex = 0;
@@ -792,7 +807,7 @@ namespace QuanLiCafe
             // panel2
             // 
             this.panel2.Controls.Add(this.dtgvFood);
-            this.panel2.Location = new System.Drawing.Point(6, 89);
+            this.panel2.Location = new System.Drawing.Point(6, 96);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(389, 282);
             this.panel2.TabIndex = 1;
@@ -812,7 +827,7 @@ namespace QuanLiCafe
             this.panel1.Controls.Add(this.btnEditFood);
             this.panel1.Controls.Add(this.btnDeleteFood);
             this.panel1.Controls.Add(this.btnAddFood);
-            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Location = new System.Drawing.Point(6, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 77);
             this.panel1.TabIndex = 0;
@@ -860,7 +875,7 @@ namespace QuanLiCafe
             this.tabBill.Location = new System.Drawing.Point(4, 24);
             this.tabBill.Name = "tabBill";
             this.tabBill.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBill.Size = new System.Drawing.Size(759, 389);
+            this.tabBill.Size = new System.Drawing.Size(757, 380);
             this.tabBill.TabIndex = 0;
             this.tabBill.Text = "Doanh Thu";
             this.tabBill.UseVisualStyleBackColor = true;
@@ -872,28 +887,28 @@ namespace QuanLiCafe
             this.panel3.Controls.Add(this.dtpkFromDate);
             this.panel3.Location = new System.Drawing.Point(7, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(631, 28);
+            this.panel3.Size = new System.Drawing.Size(744, 28);
             this.panel3.TabIndex = 3;
             // 
             // btnViewBill
             // 
-            this.btnViewBill.Location = new System.Drawing.Point(283, 2);
+            this.btnViewBill.Location = new System.Drawing.Point(340, 3);
             this.btnViewBill.Name = "btnViewBill";
-            this.btnViewBill.Size = new System.Drawing.Size(75, 23);
+            this.btnViewBill.Size = new System.Drawing.Size(75, 25);
             this.btnViewBill.TabIndex = 2;
-            this.btnViewBill.Text = "Xem";
+            this.btnViewBill.Text = "Thống Kê";
             this.btnViewBill.UseVisualStyleBackColor = true;
             // 
             // dtpkToDate
             // 
-            this.dtpkToDate.Location = new System.Drawing.Point(428, 2);
+            this.dtpkToDate.Location = new System.Drawing.Point(541, 5);
             this.dtpkToDate.Name = "dtpkToDate";
             this.dtpkToDate.Size = new System.Drawing.Size(200, 23);
             this.dtpkToDate.TabIndex = 1;
             // 
             // dtpkFromDate
             // 
-            this.dtpkFromDate.Location = new System.Drawing.Point(3, 2);
+            this.dtpkFromDate.Location = new System.Drawing.Point(3, 4);
             this.dtpkFromDate.Name = "dtpkFromDate";
             this.dtpkFromDate.Size = new System.Drawing.Size(200, 23);
             this.dtpkFromDate.TabIndex = 0;
@@ -903,16 +918,16 @@ namespace QuanLiCafe
             this.panel4.Controls.Add(this.dtgvBill);
             this.panel4.Location = new System.Drawing.Point(6, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(632, 322);
+            this.panel4.Size = new System.Drawing.Size(745, 335);
             this.panel4.TabIndex = 2;
             // 
             // dtgvBill
             // 
             this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvBill.Location = new System.Drawing.Point(4, 3);
+            this.dtgvBill.Location = new System.Drawing.Point(3, 3);
             this.dtgvBill.Name = "dtgvBill";
             this.dtgvBill.RowTemplate.Height = 25;
-            this.dtgvBill.Size = new System.Drawing.Size(625, 316);
+            this.dtgvBill.Size = new System.Drawing.Size(739, 329);
             this.dtgvBill.TabIndex = 0;
             // 
             // tabControl
@@ -925,35 +940,18 @@ namespace QuanLiCafe
             this.tabControl.Location = new System.Drawing.Point(21, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(767, 417);
+            this.tabControl.Size = new System.Drawing.Size(765, 408);
             this.tabControl.TabIndex = 0;
-            // 
-            // cbDisplayName
-            // 
-            this.cbDisplayName.Location = new System.Drawing.Point(126, 6);
-            this.cbDisplayName.Name = "cbDisplayName";
-            this.cbDisplayName.Size = new System.Drawing.Size(216, 23);
-            this.cbDisplayName.TabIndex = 2;
-            // 
-            // btnRePass
-            // 
-            this.btnRePass.Location = new System.Drawing.Point(233, 136);
-            this.btnRePass.Name = "btnRePass";
-            this.btnRePass.Size = new System.Drawing.Size(116, 34);
-            this.btnRePass.TabIndex = 4;
-            this.btnRePass.Text = "Đặt lại mật khẩu";
-            this.btnRePass.UseVisualStyleBackColor = true;
             // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(818, 423);
             this.Controls.Add(this.tabControl);
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            this.Load += new System.EventHandler(this.fAdmin_Load);
             this.tabAccount.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);

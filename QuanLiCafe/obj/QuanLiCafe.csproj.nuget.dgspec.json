@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe\\QuanLiCafe.csproj": {}
+    "C:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe.csproj": {}
   },
   "projects": {
-    "E:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe\\QuanLiCafe.csproj": {
+    "C:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe\\QuanLiCafe.csproj",
+        "projectUniqueName": "C:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe.csproj",
         "projectName": "QuanLiCafe",
-        "projectPath": "E:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe\\QuanLiCafe.csproj",
+        "projectPath": "C:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe.csproj",
         "packagesPath": "C:\\Users\\01020\\.nuget\\packages\\",
-        "outputPath": "E:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\QuanLiCafe\\obj\\",
+        "outputPath": "C:\\QuanLiCafe_Winforms_SQL\\QuanLiCafe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\01020\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
