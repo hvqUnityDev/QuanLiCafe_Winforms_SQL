@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiCafe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,20 @@ namespace QuanLiCafe
         public fTableManager()
         {
             InitializeComponent();
+            LoadTable();
         }
 
+        #region Menthod
+
+        void LoadTable()
+        {
+            TableDAO.Instance.LoadTableList();
+        }
+
+        #endregion
+
+        #region Events
+        
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();   
@@ -31,5 +44,7 @@ namespace QuanLiCafe
             fAdmin f = new fAdmin();
             f.ShowDialog();
         }
+
+        #endregion
     }
 }

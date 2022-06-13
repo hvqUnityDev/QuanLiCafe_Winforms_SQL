@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\QuanLiCafe"
+    "\\QuanLiCafe",
+    "\\QuanLiCafe\\DAO"
   ],
-  "SelectedNode": "\\QuanLiCafe\\fAdmin.cs",
+  "SelectedNode": "\\QuanLiCafe\\DAO\\TableDAO.cs",
   "PreviewInSolutionExplorer": false
 }

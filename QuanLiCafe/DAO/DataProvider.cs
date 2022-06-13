@@ -10,6 +10,7 @@ namespace QuanLiCafe.DAO
     {
         private static DataProvider instance;
 
+        //Data Source=DESKTOP-8KRDSV7;Initial Catalog=Coffee;Integrated Security=True
         private string connectionStr = @"Data Source=DESKTOP-8KRDSV7;Initial Catalog=Coffee;Integrated Security=True";
 
         public static DataProvider Instance 
