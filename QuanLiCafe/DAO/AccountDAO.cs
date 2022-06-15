@@ -19,7 +19,7 @@ namespace QuanLiCafe.DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = @"Exec USP_Login @userName = , @passWord = ";
+            string query = @"Exec USP_Login @userName , @passWord ";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName , passWord});
 

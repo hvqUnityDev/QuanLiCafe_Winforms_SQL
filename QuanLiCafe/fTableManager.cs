@@ -1,4 +1,5 @@
 ﻿using QuanLiCafe.DAO;
+using QuanLiCafe.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,10 +20,28 @@ namespace QuanLiCafe
 
         #region Menthod
 
-        void LoadTable()
+        public void LoadTable()
         {
-            TableDAO.Instance.LoadTableList();
+            List<Table> tableList = TableDAO.Instance.LoadTableList();
+
+            foreach (Table item in tableList)
+            {
+                Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
+                btn.Text = item.Name + Environment.NewLine + item.Status;
+                switch (item.Status) {
+                    case "Trống":
+                        btn.BackColor = Color.Aqua;
+                        break;
+                    default:
+                        btn.BackColor = Color.Red;
+                        break; 
+                }
+
+                flpTable.Controls.Add(btn);
+            }
         }
+
+
 
         #endregion
 

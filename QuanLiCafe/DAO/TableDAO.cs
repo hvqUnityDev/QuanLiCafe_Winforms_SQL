@@ -9,7 +9,7 @@ namespace QuanLiCafe.DAO
     public class TableDAO
     {
         private static TableDAO instance;
-
+        
         public static TableDAO Instance
         {
             get { if (instance == null) instance = new TableDAO(); return TableDAO.instance; }
@@ -33,8 +33,8 @@ namespace QuanLiCafe.DAO
             return tableList;
         }
 
-        //public static int TableWidth = 50;
-        //public static int TableHeight = 50;
+        public static int TableWidth = 100;
+        public static int TableHeight = 100;
 
 
     }

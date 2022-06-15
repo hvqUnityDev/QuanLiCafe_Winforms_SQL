@@ -22,17 +22,17 @@ namespace QuanLiCafe.DAO
         private DataProvider() { }
 
         // trả về số dòng kết quả
-        public DataTable ExecuteQuery(string query, object[] parameters = null)
+        public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(connectionStr))
             {
                 connection.Open();
 
-                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlCommand command = new SqlCommand(query, connection);
 
-                //cmd.Parameters.AddWithValue(parameter);
-                if(parameters != null)
+                if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
                     int i = 0;
@@ -40,19 +40,20 @@ namespace QuanLiCafe.DAO
                     {
                         if (item.Contains('@'))
                         {
-                            cmd.Parameters.AddWithValue(item, parameters[i]);
+                            command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
                         }
                     }
                 }
 
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
 
                 adapter.Fill(data);
+                
 
                 connection.Close();
-            };
-           
+            }
+
             return data;
         }
 

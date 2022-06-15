@@ -22,13 +22,13 @@ namespace QuanLiCafe
         {
             string userName = txbUserName.Text;
             string passWord = txbPassWord.Text;
-
             if (Login(userName, passWord))
             {
                 fTableManager fTableManager = new fTableManager();
                 this.Hide();
                 fTableManager.ShowDialog();
                 this.Show();
+                
             }
             else
             {

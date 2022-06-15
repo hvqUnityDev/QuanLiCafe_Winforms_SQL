@@ -227,6 +227,7 @@ namespace QuanLiCafe
             // 
             // flpTable
             // 
+            this.flpTable.AutoScroll = true;
             this.flpTable.Location = new System.Drawing.Point(12, 33);
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(524, 400);

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace QuanLiCafe.DTO
 {
-    class Table
+    public class Table
     {
         private int iD;
 

@@ -79,6 +79,7 @@ namespace QuanLiCafe
             this.txbPassWord.Name = "txbPassWord";
             this.txbPassWord.Size = new System.Drawing.Size(187, 23);
             this.txbPassWord.TabIndex = 1;
+            this.txbPassWord.Text = "1";
             this.txbPassWord.UseSystemPasswordChar = true;
             // 
             // label1
@@ -115,6 +116,7 @@ namespace QuanLiCafe
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.Size = new System.Drawing.Size(187, 23);
             this.txbUserName.TabIndex = 1;
+            this.txbUserName.Text = "k9";
             // 
             // label2
             // 
